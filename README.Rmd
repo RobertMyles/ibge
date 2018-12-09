@@ -13,9 +13,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-# ibgeR
+# ibge
 
-ibgeR is a work in progress. The idea is to download and make available (in a tidy format) the data from the IBGE [Cidades](https://cidades.ibge.gov.br/) project. 
+ibge is a work in progress. The idea is to download and make available (in a tidy format) the data from the IBGE [Cidades](https://cidades.ibge.gov.br/) project. 
 
 As this is A WIP, contributions are welcome. GET requests for this are quite straightforward. 
 

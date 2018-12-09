@@ -1,9 +1,9 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ibgeR
+# ibge
 
-ibgeR is a work in progress. The idea is to download and make available
+ibge is a work in progress. The idea is to download and make available
 (in a tidy format) the data from the IBGE
 [Cidades](https://cidades.ibge.gov.br/) project.
 

@@ -1,4 +1,4 @@
-Package: ibgeR
+Package: ibge
 Type: Package
 Title: A Package for Accessing the Municipal-level Data of the Instituto Brasileiro de Geografia e Estatistica (Brazilian Institute of Geography and Statistics)
 Version: 0.1.0
