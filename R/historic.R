@@ -1,11 +1,22 @@
-library(tidyverse)
-
-data("ibge_codes")
-code <- filter(ibge_codes, municipio == "Colina") %>%
-  pull(codes)
-
-historic <- function(code = NULL, render = FALSE){
-
+#' @importFrom httr GET
+#' @importFrom xml2 read_html
+#' @importFrom rvest html_text
+#' @importFrom jsonlite fromJSON
+#' @importFrom tibble tibble
+#' @importFrom purrr map_chr
+#' @importFrom tidyr separate
+#' @importFrom glue glue
+#' @importFrom htmltools HTML
+#' @importFrom htmltools html_print
+#' @importFrom magrittr "%>%"
+#' @title Download Historical Data on Brazilian Municipalities
+#' @param code IBGE code. See \code{data("ibge_codes")}.
+#' @param render In an interactive R session, whether to produce a HTML
+#' page of the information that is returned by the function. This will
+#' open in the RStudio viewer, if using RStudio.
+#' @export
+historic <- function(code = NULL, render = TRUE){
+  if(!interactive()) render <- FALSE
   if(is.null(code)) stop("IBGE code needed. See `data('ibge_codes)`.")
   if(nchar(code) < 7) stop("Invalid code. See `data('ibge_codes)`.")
 

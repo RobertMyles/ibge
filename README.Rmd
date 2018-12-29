@@ -48,6 +48,18 @@ df
 There is a dataset of municipio codes, names and UFs included. 
 
 ```{r}
+library(ibge)
 data("ibge_codes")
 head(ibge_codes)
 ```
+
+## Usage
+
+The function `historic()` returns a one-line dataframe of information on the municipality selected. Since this may be of limited use, it also prints out a HTML page of the same information (in an interactive session only). If using RStudio, this will appear in the Viewer pane. This function returns data in the original Portuguese.  
+For example, let's learn a little about _Nova Olinda do Norte_, in Amazonas state (I hope you've brushed up on your Brazilian Portuguese).  
+```{r}
+dplyr::filter(ibge_codes, municipio == "Nova Olinda do Norte") %>% 
+  historic()
+``` 
+
+<img src="https://i.imgur.com/5JriErp.png">
